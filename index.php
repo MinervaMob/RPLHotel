@@ -47,7 +47,6 @@ session_start();
     <section id="auth_section">
 
         <div class="logo">
-            <!-- <img class="bluebirdlogo" src="./image/bluebirdlogo.png" alt="logo"> -->
             <p>RPL HOTEL</p>
         </div>
 
@@ -61,7 +60,7 @@ session_start();
                     <div class="btns">Staff</div>
                 </div>
 
-                <!-- // ==userlogin== -->
+                <!-- ==userlogin== -->
                 <?php 
                 if (isset($_POST['user_login_submit'])) {
                     $Email = $_POST['Email'];

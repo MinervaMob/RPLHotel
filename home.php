@@ -44,7 +44,6 @@ if($usermail == true){
 <body>
   <nav>
     <div class="logo">
-      <!-- <img class="bluebirdlogo" src="./image/bluebirdlogo.png" alt="logo"> -->
       <p>RPL Hotel</p>
     </div>
     <ul>
@@ -296,7 +295,7 @@ if($usermail == true){
     </div>
     <hr/>
     <div class="createdby">
-      <h5>Created by @RPLHotel</h5>
+      <h5>&copy; 2024 RPL Luxury Hotel. All Rights Reserved.</h5>
     </div>
   </footer>
 </body>

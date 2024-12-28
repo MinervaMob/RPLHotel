@@ -1,9 +1,9 @@
 <?php
 
 $server = "localhost";
-$username = "bluebird_user";
-$password = "password";
-$database = "bluebirdhotel";
+$username = "root";
+$password = "";
+$database = "rpl_hotel";
 
 $conn = mysqli_connect($server,$username,$password,$database);
 
