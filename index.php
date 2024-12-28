@@ -47,15 +47,15 @@ session_start();
     <section id="auth_section">
 
         <div class="logo">
-            <img class="bluebirdlogo" src="./image/bluebirdlogo.png" alt="logo">
-            <p>BLUEBIRD</p>
+            <!-- <img class="bluebirdlogo" src="./image/bluebirdlogo.png" alt="logo"> -->
+            <p>RPL HOTEL</p>
         </div>
 
         <div class="auth_container">
             <!--============ login =============-->
 
             <div id="Log_in">
-                <h2>Log In</h2>
+                <h2>Masuk</h2>
                 <div class="role_btn">
                     <div class="btns active">User</div>
                     <div class="btns">Staff</div>
@@ -97,10 +97,10 @@ session_start();
                         <input type="password" class="form-control" name="Password" placeholder=" ">
                         <label for="Password">Password</label>
                     </div>
-                    <button type="submit" name="user_login_submit" class="auth_btn">Log in</button>
+                    <button type="submit" name="user_login_submit" class="auth_btn">Masuk</button>
 
                     <div class="footer_line">
-                        <h6>Don't have an account? <span class="page_move_btn" onclick="signuppage()">sign up</span></h6>
+                        <h6>Belum punya akun? <span class="page_move_btn" onclick="signuppage()">Daftar</span></h6>
                     </div>
                 </form>
                 
@@ -136,7 +136,7 @@ session_start();
                         <input type="password" class="form-control" name="Emp_Password" placeholder=" ">
                         <label for="floatingPassword">Password</label>
                     </div>
-                    <button type="submit" name="Emp_login_submit" class="auth_btn">Log in</button>
+                    <button type="submit" name="Emp_login_submit" class="auth_btn">Masuk</button>
                 </form>
                 
             </div>
@@ -198,7 +198,7 @@ session_start();
                 }
             ?>
             <div id="sign_up">
-                <h2>Sign Up</h2>
+                <h2>Daftar</h2>
 
                 <form class="user_signup" id="usersignup" action="" method="POST">
                     <div class="form-floating">
@@ -218,10 +218,10 @@ session_start();
                         <label for="CPassword">Confirm Password</label>
                     </div>
 
-                    <button type="submit" name="user_signup_submit" class="auth_btn">Sign up</button>
+                    <button type="submit" name="user_signup_submit" class="auth_btn">Daftar</button>
 
                     <div class="footer_line">
-                        <h6>Already have an account? <span class="page_move_btn" onclick="loginpage()">Log in</span></h6>
+                        <h6>Sudah punya akun? <span class="page_move_btn" onclick="loginpage()">Masuk</span></h6>
                     </div>
                 </form>
             </div>

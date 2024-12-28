@@ -17,7 +17,7 @@
     $roomre = mysqli_query($conn, $roomsql);
     $roomrow = mysqli_num_rows($roomre);
 
-    //roombook roomtype
+    // roombook roomtype
     $chartroom1 = "SELECT * FROM roombook WHERE RoomType='Superior Room'";
     $chartroom1re = mysqli_query($conn, $chartroom1);
     $chartroom1row = mysqli_num_rows($chartroom1re);
@@ -35,19 +35,20 @@
     $chartroom4row = mysqli_num_rows($chartroom4re);
 ?>
 <!-- moriss profit -->
-<?php 	
-					$query = "SELECT * FROM payment";
-					$result = mysqli_query($conn, $query);
-					$chart_data = '';
-					$tot = 0;
-					while($row = mysqli_fetch_array($result))
-					{
-              $chart_data .= "{ date:'".$row["cout"]."', profit:".$row["finaltotal"]*10/100 ."}, ";
-              $tot = $tot + $row["finaltotal"]*10/100;
-					}
+<?php
+    $query = "SELECT * FROM payment";
+    $result = mysqli_query($conn, $query);
+    $chart_data = '';
+    $tot = 0;
+    while ($row = mysqli_fetch_array($result)) {
+        $profit = $row["finaltotal"];
+        $formatted_profit = number_format($profit, 3, ',', '.'); // Format ke Rupiah
+        $chart_data .= "{ date:'" . $row["cout"] . "', profit:" . $profit . "}, ";
+        $tot += $profit;
+    }
 
-					$chart_data = substr($chart_data, 0, -2);
-				
+    $chart_data = substr($chart_data, 0, -2);
+    $formatted_tot = number_format($tot, 3, ',', '.'); // Format total ke Rupiah
 ?>
 
 <!DOCTYPE html>
@@ -66,21 +67,21 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.min.js"></script>
 
-    <title>BlueBird - Admin </title>
+    <title>RPL - Admin </title>
 </head>
 <body>
    <div class="databox">
         <div class="box roombookbox">
-          <h2>Total Booked Room</h1>  
+          <h2>Total Booked Room</h2>  
           <h1><?php echo $roombookrow ?> / <?php echo $roomrow ?></h1>
         </div>
         <div class="box guestbox">
-        <h2>Total Staff</h1>  
+          <h2>Total Staff</h2>  
           <h1><?php echo $staffrow ?></h1>
         </div>
         <div class="box profitbox">
-        <h2>Profit</h1>  
-          <h1><?php echo $tot?> <span>&#8377</span></h1>
+          <h2>Profit</h2>  
+          <h1><span></span><?php echo $formatted_tot ?></h1>
         </div>
     </div>
     <div class="chartbox">
@@ -95,8 +96,6 @@
     </div>
 </body>
 
-
-
 <script>
         const labels = [
           'Superior Room',
@@ -108,7 +107,7 @@
         const data = {
           labels: labels,
           datasets: [{
-            label: 'My First dataset',
+            label: 'Room Types',
             backgroundColor: [
                 'rgba(255, 99, 132, 1)',
                 'rgba(255, 159, 64, 1)',

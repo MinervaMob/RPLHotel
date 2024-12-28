@@ -2,7 +2,10 @@
     session_start();
     include '../config.php';
 
-
+    // Fungsi untuk format rupiah
+    function formatRupiah($angka) {
+        return number_format($angka, 3, '.', ',');
+    }
 ?>
 
 <!DOCTYPE html>
@@ -68,10 +71,10 @@
 					<td><?php echo $res['noofdays'] ?></td>
                     <td><?php echo $res['NoofRoom'] ?></td>
                     <td><?php echo $res['meal'] ?></td>
-                    <td><?php echo $res['roomtotal'] ?></td>
-					<td><?php echo $res['bedtotal'] ?></td>
-					<td><?php echo $res['mealtotal'] ?></td>
-					<td><?php echo $res['finaltotal'] ?></td>
+                    <td><?php echo formatRupiah($res['roomtotal']); ?></td>
+					<td><?php echo formatRupiah($res['bedtotal']); ?></td>
+					<td><?php echo formatRupiah($res['mealtotal']); ?></td>
+					<td><?php echo formatRupiah($res['finaltotal']); ?></td>
                     <td class="action">
                         <a href="invoiceprint.php?id= <?php echo $res['id']?>"><button class="btn btn-primary"><i class="fa-solid fa-print"></i>Print</button></a>
 						<a href="paymantdelete.php?id=<?php echo $res['id']?>"><button class="btn btn-danger">Delete</button></a>

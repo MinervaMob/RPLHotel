@@ -22,7 +22,7 @@ if($usermail == true){
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/home.css">
-    <title>Hotel blue bird</title>
+    <title>RPL Luxury Hotel</title>
     <!-- boot -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
@@ -44,15 +44,15 @@ if($usermail == true){
 <body>
   <nav>
     <div class="logo">
-      <img class="bluebirdlogo" src="./image/bluebirdlogo.png" alt="logo">
-      <p>BLUEBIRD</p>
+      <!-- <img class="bluebirdlogo" src="./image/bluebirdlogo.png" alt="logo"> -->
+      <p>RPL Hotel</p>
     </div>
     <ul>
       <li><a href="#firstsection">Home</a></li>
       <li><a href="#secondsection">Rooms</a></li>
       <li><a href="#thirdsection">Facilites</a></li>
       <li><a href="#contactus">contact us</a></li>
-      <a href="./logout.php"><button class="btn btn-danger">Logout</button></a>
+      <a href="./logout.php"><button class="btn btn-danger">Keluar</button></a>
     </ul>
   </nav>
 
@@ -101,7 +101,7 @@ if($usermail == true){
 							endforeach;
 						?>
                     </select>
-                    <input type="text" name="Phone" placeholder="Enter Phoneno">
+                    <input type="text" name="Phone" placeholder="Enter Phone Number">
                 </div>
 
                 <div class="line"></div>
@@ -126,8 +126,8 @@ if($usermail == true){
                     <select name="NoofRoom" class="selectinput">
 						<option value selected >No of Room</option>
                         <option value="1">1</option>
-                        <!-- <option value="1">2</option>
-                        <option value="1">3</option> -->
+                        <option value="1">2</option>
+                        <option value="1">3</option>
                     </select>
                     <select name="Meal" class="selectinput">
 						<option value selected >Meal</option>
@@ -281,16 +281,24 @@ if($usermail == true){
     </div>
   </section>
 
-  <section id="contactus">
+  <footer id="contactus">
     <div class="social">
-      <i class="fa-brands fa-instagram"></i>
-      <i class="fa-brands fa-facebook"></i>
-      <i class="fa-solid fa-envelope"></i>
+      <a href="https://instagram.com/@ilhammobile99" target="_blank">
+        <i class="fa-brands fa-instagram"></i>
+      </a>
+      <a href="https://facebook.com/" target="_blank">
+        <i class="fa-brands fa-facebook"></i>
+      </a>
+      <a href="https://email.com/" target="_blank">
+        <i class="fa-solid fa-envelope"></i>
+      </a>
+      <h5>RPL Hotel</h5>
     </div>
+    <hr/>
     <div class="createdby">
-      <h5>Created by @tushar</h5>
+      <h5>Created by @RPLHotel</h5>
     </div>
-  </section>
+  </footer>
 </body>
 
 <script>

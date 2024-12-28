@@ -224,7 +224,7 @@ font-size: 30px;
 }
 
 .bookbtn{
-   margin: 10px;
+    margin: 10px;
 }
 
 /* roombookcss */
@@ -293,19 +293,26 @@ font-size: 30px;
 }
 
 #contactus{
-    height: 70px;
+    height: auto;
+    text-align: center;
     width: 100%;
     background-color: black;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding:0 100px;
+    padding: 2rem 6rem;
+    bottom: 0;
 }
 
 #contactus .social{
     width: 200px;
+    width: 100%;
+    margin-bottom: 1rem;
+    gap: 1rem;
     display: flex;
     justify-content: space-evenly;
+}
+
+#contactus .social h5 {
+    color: #fff;
+    margin-left: auto;
 }
 
 #contactus i{
@@ -314,8 +321,9 @@ font-size: 30px;
     cursor: pointer;
 }
 
-#contactus .createdby{
+#contactus .createdby h5{
     color: white;
+    font-size: 0.7rem;
 }
 
 /* responsive stuff */

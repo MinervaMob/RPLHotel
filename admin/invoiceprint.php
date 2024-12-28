@@ -405,13 +405,13 @@
 
 	$type_of_room = 0;
 	if ($troom == "Superior Room") {
-		$type_of_room = 320;
+		$type_of_room = 320000;
 	} else if ($troom == "Deluxe Room") {
-		$type_of_room = 220;
+		$type_of_room = 220000;
 	} else if ($troom == "Guest House") {
-		$type_of_room = 180;
+		$type_of_room = 180000;
 	} else if ($troom == "Single Room") {
-		$type_of_room = 150;
+		$type_of_room = 150000;
 	}
 
 	if ($bed == "Single") {
@@ -436,14 +436,18 @@
 		$type_of_meal = $type_of_bed * 4;
 	}
 
+	function formatRupiah($angka) {
+		return number_format($angka, 3, ',', '.');
+	}	
+
 	?>
 	<header>
 		<h1>Invoice</h1>
 		<address>
-			<p>HOTEL BLUE BIRD,</p>
-			<p>(+91) 9313346569</p>
+			<p>RPL LUXURY HOTEL,</p>
+			<p>(+62) 82171941437</p>
 		</address>
-		<span><img alt="" src="../image/logo.jpg"></span>
+		<!-- <span><img alt="" src="../image/logo.jpg"></span> -->
 	</header>
 	<article>
 		<h1>Recipient</h1>
@@ -475,23 +479,23 @@
 				<tr>
 					<td><span><?php echo $troom; ?></span></td>
 					<td><span><?php echo $days; ?> </span></td>
-					<td><span data-prefix>₹</span><span><?php echo $type_of_room; ?></span></td>
+					<td><span data-prefix>Rp.</span><span><?php echo formatRupiah($type_of_room); ?></span></td>
 					<td><span><?php echo $nroom; ?> </span></td>
-					<td><span data-prefix>₹</span><span><?php echo $ttot; ?></span></td>
+					<td><span data-prefix>Rp.</span><span><?php echo formatRupiah($ttot); ?></span></td>
 				</tr>
 				<tr>
 					<td><span><?php echo $bed; ?> Bed </span></td>
 					<td><span><?php echo $days; ?></span></td>
-					<td><span data-prefix>₹</span><span><?php echo $type_of_bed; ?></span></td>
+					<td><span data-prefix>Rp.</span><span><?php echo formatRupiah($type_of_bed); ?></span></td>
 					<td><span><?php echo $nroom; ?> </span></td>
-					<td><span data-prefix>₹</span><span><?php echo $btot; ?></span></td>
+					<td><span data-prefix>Rp.</span><span><?php echo formatRupiah($btot); ?></span></td>
 				</tr>
 				<tr>
 					<td><span><?php echo $meal; ?> </span></td>
 					<td><span><?php echo $days; ?></span></td>
-					<td><span data-prefix>₹</span><span><?php echo $type_of_meal ?></span></td>
+					<td><span data-prefix>Rp.</span><span><?php echo formatRupiah($type_of_meal); ?></span></td>
 					<td><span><?php echo $nroom; ?> </span></td>
-					<td><span data-prefix>₹</span><span><?php echo $mepr; ?></span></td>
+					<td><span data-prefix>Rp.</span><span><?php echo formatRupiah($mepr); ?></span></td>
 				</tr>
 			</tbody>
 		</table>
@@ -499,22 +503,22 @@
 		<table class="balance">
 			<tr>
 				<th><span>Total</span></th>
-				<td><span data-prefix>₹</span><span><?php echo $fintot; ?></span></td>
+				<td><span data-prefix>Rp.</span><span><?php echo formatRupiah($fintot); ?></span></td>
 			</tr>
 			<tr>
 				<th><span>Amount Paid</span></th>
-				<td><span data-prefix>₹</span><span>0.00</span></td>
+				<td><span data-prefix>Rp.</span><span>0.000</span></td>
 			</tr>
 			<tr>
 				<th><span>Balance Due</span></th>
-				<td><span data-prefix>₹</span><span><?php echo $fintot; ?></span></td>
+				<td><span data-prefix>Rp.</span><span><?php echo formatRupiah($fintot); ?></span></td>
 			</tr>
 		</table>
 	</article>
 	<aside>
 		<h1><span>Contact us</span></h1>
 		<div>
-			<p align="center">Email :- pankhaniyatushar9@gmail.com || Web :- www.bluebird.com || Phone :- +91 9313346569 </p>
+			<p align="center">Email :- rplhotel@gmail.com || Web :- www.RPLHotel.com || Phone :- +62 81271941437 </p>
 		</div>
 	</aside>
 
