@@ -1,6 +1,6 @@
 # RPL Luxury Hotel
 
-Simple hotel booking website with content management system. Users can book rooms for specific dates. Admin can create, update, and delete room details. Admin can manage everything in the app.
+Website pemesanan hotel sederhana dengan sistem manajemen konten. Pengguna dapat memesan kamar untuk tanggal tertentu. Admin dapat membuat, memperbarui, dan menghapus detail kamar. Admin dapat mengelola semua hal di aplikasi.
 
 <!-- ## Video -->
 <!--<a href="https://www.youtube.com/watch?v=rKwBxxVXWkM">click here..</a>-->

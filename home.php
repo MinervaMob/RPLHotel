@@ -71,7 +71,7 @@ if($usermail == true){
         </div>
 
         <div class="welcomeline">
-          <h1 class="welcometag">Welcome to heaven on earth</h1>
+          <h1 class="welcometag">Start Your Vacation with us.</h1>
         </div>
 
       <!-- bookbox -->
